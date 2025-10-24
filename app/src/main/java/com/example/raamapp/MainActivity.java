@@ -41,5 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
         ImageAdapter adapter = new ImageAdapter(this, images);
         recyclerView.setAdapter(adapter);
+
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.recycler_spacing);
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true));
     }
 }
