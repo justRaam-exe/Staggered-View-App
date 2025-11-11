@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "title": "Anime 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "image": "img_1"
+  },
+  {
+    "id": 2,
+    "title": "Anime 2",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    "image": "img_2"
+  },
+  {
+    "id": 3,
+    "title": "Anime 3",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "image": "img_3"
+  },
+  {
+    "id": 4,
+    "title": "Anime 4",
+    "description": "xcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "image": "img_4"
+  },
+  {
+    "id": 5,
+    "title": "Anime 5",
+    "description": "totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    "image": "img_5"
+  },
+  {
+    "id": 6,
+    "title": "Anime 6",
+    "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit",
+    "image": "img_6"
+  },
+  {
+    "id": 7,
+    "title": "Anime 7",
+    "description": "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est",
+    "image": "img_7"
+  },
+  {
+    "id": 8,
+    "title": "Anime 8",
+    "description": "qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora",
+    "image": "img_8"
+  },
+  {
+    "id": 9,
+    "title": "Anime 9",
+    "description": "incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam",
+    "image": "img_9"
+  },
+  {
+    "id": 10,
+    "title": "Anime 10",
+    "description": "quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur",
+    "image": "img_10"
+  },
+  {
+    "id": 11,
+    "title": "Anime 11",
+    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur",
+    "image": "img_11"
+  },
+  {
+    "id": 12,
+    "title": "Anime 12",
+    "description": "vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+    "image": "img_12"
+  },
+  {
+    "id": 13,
+    "title": "Anime 13",
+    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+    "image": "img_13"
+  },
+  {
+    "id": 14,
+    "title": "Anime 14",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "image": "img_14"
+  },
+  {
+    "id": 15,
+    "title": "Anime 15",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    "image": "img_15"
+  },
+  {
+    "id": 16,
+    "title": "Anime 16",
+    "description": "voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+    "image": "img_16"
+  },
+  {
+    "id": 17,
+    "title": "Anime 17",
+    "description": "similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga",
+    "image": "img_17"
+  },
+  {
+    "id": 18,
+    "title": "Anime 18",
+    "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio",
+    "image": "img_18"
+  },
+  {
+    "id": 19,
+    "title": "Anime 19",
+    "description": "umque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
+    "image": "img_19"
+  },
+  {
+    "id": 20,
+    "title": "Anime 20",
+    "description": "omnis dolor repellendus. Temporibus autem quibusdam et aut",
+    "image": "img_20"
+  },
+  {
+    "id": 21,
+    "title": "Anime 21",
+    "description": "fficiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae",
+    "image": "img_21"
+  },
+  {
+    "id": 22,
+    "title": "Anime 22",
+    "description": "taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis",
+    "image": "img_22"
+  },
+  {
+    "id": 23,
+    "title": "Anime 23",
+    "description": "oluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat",
+    "image": "img_23"
+  },
+  {
+    "id": 24,
+    "title": "Anime 24",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    "image": "img_24"
+  },
+  {
+    "id": 25,
+    "title": "Anime 25",
+    "description": "empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "image": "img_25"
+  },
+  {
+    "id": 26,
+    "title": "Anime 26",
+    "description": "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "image": "img_26"
+  }
+]

@@ -1,6 +1,5 @@
 package com.example.raamapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,7 +7,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ImageDetailActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,13 +16,14 @@ public class ImageDetailActivity extends AppCompatActivity {
         TextView titleView = findViewById(R.id.detailTitle);
         TextView descView = findViewById(R.id.detailDesc);
 
-        Intent intent = getIntent();
-        int imageRes = intent.getIntExtra("imageRes", 0);
-        String title = intent.getStringExtra("title");
-        String desc = intent.getStringExtra("desc");
+        int imageRes = getIntent().getIntExtra("imageRes", 0);
+        String title = getIntent().getStringExtra("imageTitle");
+        String desc = getIntent().getStringExtra("imageDesc");
 
-        imageView.setImageResource(imageRes);
-        titleView.setText(title);
-        descView.setText(desc);
+        if (imageRes != 0) {
+            imageView.setImageResource(imageRes);
+        }
+        titleView.setText(title != null ? title : "No title");
+        descView.setText(desc != null ? desc : "No description");
     }
 }
