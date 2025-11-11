@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000">
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    android:paddingTop="32dp"
+    tools:context=".HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
@@ -11,5 +15,5 @@
         android:layout_height="match_parent"
         android:padding="8dp"
         android:clipToPadding="false"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical" />
 </LinearLayout>
