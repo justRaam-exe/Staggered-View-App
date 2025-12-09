@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/settingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Page"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24px"/>
+
+        <GridLayout
+            android:id="@+id/settingGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+
+<!--            item 1-->
+            <LinearLayout
+                android:id="@+id/menuAboutApp"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="About App"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+<!--            Item 2-->
+            <LinearLayout
+                android:id="@+id/menuAboutDev"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="About Dev"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+<!--            Item 3-->
+            <LinearLayout
+                android:id="@+id/menuTheme"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Theme Setting"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+<!--            Item 4-->
+            <LinearLayout
+                android:id="@+id/menuFeedback"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Send Feedback"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+<!--            Item 5-->
+            <LinearLayout
+                android:id="@+id/menuPrivacy"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Privacy and Policy"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+<!--            Item 6-->
+            <LinearLayout
+                android:id="@+id/menuVersion"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Version Info"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

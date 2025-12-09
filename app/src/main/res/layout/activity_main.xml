@@ -59,7 +59,7 @@
             android:contentDescription="Search"/>
         
         <ImageButton
-            android:id="@+id/btn_profile"
+            android:id="@+id/btn_setting"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

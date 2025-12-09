@@ -17,7 +17,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton homeBtn, searchBtn, profileBtn;
+    ImageButton homeBtn, searchBtn, settingBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         homeBtn = findViewById(R.id.btn_home);
         searchBtn = findViewById(R.id.btn_search);
-        profileBtn = findViewById(R.id.btn_profile);
+        settingBtn = findViewById(R.id.btn_setting);
 
         replaceFragment(new HomeFragment());
 
         homeBtn.setOnClickListener(v -> replaceFragment(new HomeFragment()));
         searchBtn.setOnClickListener(v -> replaceFragment(new SearchFragment()));
-        profileBtn.setOnClickListener(v -> replaceFragment(new ProfileFragment()));
+        settingBtn.setOnClickListener(v -> replaceFragment(new SettingFragment()));
     }
     private void replaceFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
