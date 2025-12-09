@@ -1,6 +1,7 @@
 package com.example.raamapp;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,9 @@ public class ImageDetailActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.detailImage);
         TextView titleView = findViewById(R.id.detailTitle);
         TextView descView = findViewById(R.id.detailDesc);
+        ImageButton btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> onBackPressed());
 
         int imageRes = getIntent().getIntExtra("imageRes", 0);
         String title = getIntent().getStringExtra("imageTitle");
