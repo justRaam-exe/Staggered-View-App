@@ -2,8 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="24dp"
-    android:background="#000">
+    android:background="#000"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,122 +17,194 @@
             android:id="@+id/settingTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile Page"
+            android:text="Setting"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24px"/>
+            android:layout_marginBottom="24dp"/>
 
         <GridLayout
             android:id="@+id/settingGrid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="3"
             android:alignmentMode="alignMargins"
             android:useDefaultMargins="true">
 
-<!--            item 1-->
-            <LinearLayout
+<!--            Item 1-->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/menuAboutApp"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#1e1e1e"
+                >
 
-                <TextView
-                    android:text="About App"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="About App"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 <!--            Item 2-->
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:id="@+id/menuAboutDev"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#1e1e1e"
+                >
 
-                <TextView
-                    android:text="About Dev"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
 
-<!--            Item 3-->
-            <LinearLayout
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="About Dev"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            item 3-->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/menuTheme"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#1e1e1e"
+                >
 
-                <TextView
-                    android:text="Theme Setting"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Theme Setting"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 <!--            Item 4-->
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:id="@+id/menuFeedback"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#1e1e1e"
+                >
 
-                <TextView
-                    android:text="Send Feedback"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
 
-<!--            Item 5-->
-            <LinearLayout
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Send Feedback"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            item 5-->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/menuPrivacy"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#1e1e1e"
+                >
 
-                <TextView
-                    android:text="Privacy and Policy"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
 
-<!--            Item 6-->
-            <LinearLayout
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Privacy and Policy"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            item 6-->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/menuVersion"
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#1e1e1e"
+                >
 
-                <TextView
-                    android:text="Version Info"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Version Info"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2025, RaamApp"
+            android:textColor="#6f6f6f"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 </ScrollView>

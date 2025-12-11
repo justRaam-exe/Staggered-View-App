@@ -1,5 +1,6 @@
 package com.example.raamapp;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,15 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 public class SettingFragment extends Fragment {
 
-    LinearLayout menuAboutApp, menuAboutDev, menuTheme, menuFeedback, menuPrivacy, menuVersion;
+    CardView menuAboutApp, menuAboutDev, menuTheme, menuFeedback, menuPrivacy, menuVersion;
 
     @Nullable
     @Override
@@ -36,30 +37,42 @@ public class SettingFragment extends Fragment {
 
     private void setupClicks() {
 
-        menuAboutApp.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "About App Clicked", Toast.LENGTH_SHORT).show();
-        });
+        menuAboutApp.setOnClickListener(v -> showDialog(
+            "About App",
+            "RaamApp adalah Aplikasi Anime Wallpaper"
+        ));
 
-        menuAboutDev.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "About Dev Clicked", Toast.LENGTH_SHORT).show();
-        });
+        menuAboutDev.setOnClickListener(v -> showDialog(
+            "About Developer",
+            "Developer: Yohanes Bramanta Adita Saputra" +
+                    "\nEmail: sayapinterbuatakun@gmail.com" + "\nInstagram: buramanta_" + "\nGithub: justRaam-exe"
+        ));
         
-        menuTheme.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Theme Setting Clicked", Toast.LENGTH_SHORT).show();
-        });
+        menuTheme.setOnClickListener(v -> showDialog(
+            "Theme Setting",
+            "Untuk Fitur ubah latar belakang masih di tahap pengerjaan"
+        ));
         
         menuFeedback.setOnClickListener(v -> {
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-            emailIntent.setData(Uri.parse("mailto : sayapinterbuatakun@gmail.com"));
+            emailIntent.setData(Uri.parse("mailto:sayapinterbuatakun@gmail.com"));
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback Aplikasi");
+            startActivity(emailIntent);
         });
 
-        menuPrivacy.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Opening Privacy Policy", Toast.LENGTH_SHORT).show();
-        });
+        menuPrivacy.setOnClickListener(v -> showDialog(
+            "Privacy and Policy",
+            "Aplikasi ini ..."
+        ));
 
-        menuVersion.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Version 1.0.0", Toast.LENGTH_SHORT).show();
-        });
+        menuVersion.setOnClickListener(v -> showDialog(
+            "Version Info",
+                "Versi Aplikasi: 1.0.0" + "\nTanggal Rilis: 2025"
+
+        ));
+    }
+
+    private void showDialog(String title, String message) {
+        new AlertDialog.Builder(getContext()).setTitle(title).setMessage(message).setPositiveButton("OK", null).show();
     }
 }
