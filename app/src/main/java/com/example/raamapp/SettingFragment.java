@@ -44,7 +44,7 @@ public class SettingFragment extends Fragment {
 
         menuAboutDev.setOnClickListener(v -> showDialog(
             "About Developer",
-            "Developer: Yohanes Bramanta Adita Saputra" +
+            "Developer: Yohanes Bramanta Adita Saputra " +
                     "\nEmail: sayapinterbuatakun@gmail.com" + "\nInstagram: buramanta_" + "\nGithub: justRaam-exe"
         ));
         

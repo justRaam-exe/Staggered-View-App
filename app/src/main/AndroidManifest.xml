@@ -11,20 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RaamApp">
-
+        <activity
+            android:name=".about_app"
+            android:exported="false" />
         <!-- Activity utama -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- ✅ Tambahkan ini -->
+        </activity> <!-- ✅ Tambahkan ini -->
         <activity android:name=".ImageDetailActivity" />
-
     </application>
 
 </manifest>
