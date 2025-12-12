@@ -59,5 +59,15 @@
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textStyle="bold"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:paddingTop="15dp"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
     </LinearLayout>
 </ScrollView>
