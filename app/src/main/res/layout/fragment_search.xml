@@ -13,17 +13,18 @@
 
     <!-- Search Bar -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="48dp"
         android:orientation="horizontal"
         android:background="@drawable/bg_searchbar"
         android:paddingHorizontal="12dp"
+        android:layout_gravity="center"
         android:gravity="center_vertical"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="7dp"
         android:elevation="4dp">
 
         <ImageView
-            android:layout_width="20dp"
+            android:layout_width="30dp"
             android:layout_height="20dp"
             android:src="@drawable/ic_search_real"
             android:tint="@color/white"
