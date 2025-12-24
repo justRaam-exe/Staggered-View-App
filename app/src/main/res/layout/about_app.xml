@@ -14,11 +14,21 @@
         android:orientation="vertical"
         android:gravity="center_vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher_round"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="6dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:layout_width="match_parent"
