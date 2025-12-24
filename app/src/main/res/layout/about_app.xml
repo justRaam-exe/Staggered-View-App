@@ -40,44 +40,93 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="App Description"
-            android:paddingTop="15dp"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="App Description"-->
+<!--            android:paddingTop="15dp"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textStyle="bold"/>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Main Feature"
-            android:paddingTop="15dp"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Main Feature"-->
+<!--            android:paddingTop="15dp"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textStyle="bold"/>-->
 
-        <TextView
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="App Purpose"-->
+<!--            android:paddingTop="15dp"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textStyle="bold"/>-->
+<!--        -->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Developer"-->
+<!--            android:paddingTop="15dp"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textStyle="bold"/>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menuAboutApp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="App Purpose"
-            android:paddingTop="15dp"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"/>
-        
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Developer"
-            android:paddingTop="15dp"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"/>
+            android:layout_height="185dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="13dp"
+            app:cardBackgroundColor="#1e1e1e">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="About App"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textAlignment="textStart"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="#595757"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:text="RaamApp adalah aplikasi Wallpaper berbasis Android. Aplikasi ini dirancang
+                              untuk memberikan pengalaman penggunaan yang sederhana, cepat, dan efisien. RaamApp
+                              dikembangkan dengan fokus pada kenyamanan, performa, dan kemudahan pengguna, sehingga
+                              sehingga cocok digunakan oleh berbagai kalangan"/>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>
