@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">RaamApp</string>
+
+    <string name="aboutAppText">
+        RaamApp adalah aplikasi Wallpaper berbasis Android. Aplikasi ini dirancang
+        untuk memberikan pengalaman penggunaan yang sederhana, cepat, dan efisien. RaamApp
+        dikembangkan dengan fokus pada kenyamanan, performa, dan kemudahan pengguna, sehingga
+        cocok digunakan oleh berbagai kalangan
+    </string>
+
+    <string name="mainFeaturesText">
+        \u2022 Search Bar\n
+        \u2022 Apply to Wallpaper\n
+        \u2022 Switch Theme\n
+    </string>
 </resources>
