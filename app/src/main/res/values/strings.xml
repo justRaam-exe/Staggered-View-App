@@ -13,4 +13,13 @@
         \u2022 Apply to Wallpaper\n
         \u2022 Switch Theme\n
     </string>
+
+    <string name="appPurposeVision">
+        \u2022 Visi Aplikasi\n
+        Menjadi platform wallpaper yang menghadirkan visual berkualitas tinggi untuk
+        mempercantik perangkat dan mengekspresikan karakter setiap pengguna\n\n
+        \u2022 Tujuan aplikasi\n
+        Menyediakan koleksi Wallpaper yang beragam, mudah diakses, dan selalu diperbarui
+        agar pengguna dapat menemukan tampilan yang sesuai dengan gaya dan suasana mereka
+    </string>
 </resources>
