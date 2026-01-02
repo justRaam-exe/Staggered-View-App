@@ -12,8 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RaamApp">
         <activity
-            android:name=".about_app"
-            android:exported="false" />
+            android:name=".AboutAppActivity" />
         <!-- Activity utama -->
         <activity
             android:name=".MainActivity"
@@ -23,7 +22,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- ✅ Tambahkan ini -->
+        </activity>
         <activity android:name=".ImageDetailActivity" />
     </application>
 
