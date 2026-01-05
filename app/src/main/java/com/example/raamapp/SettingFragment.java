@@ -32,6 +32,11 @@ public class SettingFragment extends Fragment {
             startActivity(intent);
         });
 
+        menuAboutDev.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), AboutDevActivity.class);
+            startActivity(intent);
+        });
+
 
         return view;
     }
