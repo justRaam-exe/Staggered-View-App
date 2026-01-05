@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RaamApp">
         <activity
-            android:name=".AboutAppActivity" />
-        <!-- Activity utama -->
+            android:name=".AboutDevActivity"
+            android:exported="false" />
+        <activity android:name=".AboutAppActivity" /> <!-- Activity utama -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

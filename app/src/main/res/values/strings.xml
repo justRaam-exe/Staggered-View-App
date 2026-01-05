@@ -9,9 +9,7 @@
     </string>
 
     <string name="mainFeaturesText">
-        \u2022 Search Bar\n
-        \u2022 Apply to Wallpaper\n
-        \u2022 Switch Theme\n
+        \u2022 Search Bar\n\u2022 Apply to Wallpaper\n\u2022 Switch Theme\n
     </string>
 
     <string name="appPurposeVision">
@@ -21,5 +19,23 @@
         \u2022 Tujuan aplikasi\n
         Menyediakan koleksi Wallpaper yang beragam, mudah diakses, dan selalu diperbarui
         agar pengguna dapat menemukan tampilan yang sesuai dengan gaya dan suasana mereka
+    </string>
+
+    <string name="aboutDeveloper">
+        FrontEnd Developer and Mobile Developer Enthusiast\nBuilding simple, useful and clean mobile experience
+    </string>
+
+    <string name="ShortBio">
+        I am an Android developer who enjoys building clean, functional, and user-friendly applications.
+        I focus on writting simple, maintainable code while continuously learning modern Android development
+        pratices
+    </string>
+
+    <string name="FavQuote">
+        Whatever you are, be the good one.
+    </string>
+
+    <string name="AuthorQuote">
+        - Abraham Lincoln
     </string>
 </resources>
