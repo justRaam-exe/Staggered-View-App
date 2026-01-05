@@ -182,6 +182,51 @@
                 android:text="@string/devTechStack"/>
         </androidx.cardview.widget.CardView>
 
+        <!--Why this app exist-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="13dp"
+            app:cardBackgroundColor="#1e1e1e">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Why this App exist"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="#595757"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:text="@string/thisAppExist"/>
+        </androidx.cardview.widget.CardView>
+
         <!-- Dev Favorite Quote -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
