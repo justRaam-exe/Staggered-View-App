@@ -38,4 +38,8 @@
     <string name="AuthorQuote">
         - Abraham Lincoln
     </string>
+
+    <string name="devTechStack">
+        \u2022 HTML\n\u2022 CSS\n\u2022 Javascript\n\u2022 Java\n\u2022 Python\n\u2022 PHP
+    </string>
 </resources>

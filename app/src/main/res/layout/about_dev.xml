@@ -139,7 +139,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/devTechStack"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="165dp"
             android:layout_columnWeight="1"
             android:layout_margin="10dp"
             android:layout_marginBottom="20dp"
@@ -150,17 +150,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
+                android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp">
 
                 <TextView
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content"
-                    android:text="Main Features"
+                    android:text="Tech Stack :"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"
-                    android:textAlignment="textStart"/>
+                    android:textAlignment="center"/>
             </LinearLayout>
 
             <View
@@ -168,8 +168,8 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="40dp"
                 android:background="#595757"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -179,7 +179,7 @@
                 android:layout_marginRight="10dp"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
-                android:text="@string/mainFeaturesText"/>
+                android:text="@string/devTechStack"/>
         </androidx.cardview.widget.CardView>
 
         <!-- Dev Favorite Quote -->
