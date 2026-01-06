@@ -3,5 +3,11 @@
     <style name="Base.Theme.RaamApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">#9E9E9E</item>
     </style>
 </resources>

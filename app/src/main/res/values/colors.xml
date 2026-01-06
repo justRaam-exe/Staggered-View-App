@@ -3,4 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#888888</color>
+    
+    <!--light mode-->
+    <color name="bg_light">#FFFFFF</color>
+    <color name="surface_light">#F5F5F5</color>
+    
+    <!--Dark Mode-->
+    <color name="bg_dark">#000000</color>
+    <color name="surface_dark">#1E1E1E</color>
 </resources>

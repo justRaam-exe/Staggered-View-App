@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="24dp"
-    android:background="#000"
+    android:background="?android:colorBackground"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Setting"
-            android:textColor="@android:color/white"
+            android:textColor="?android:textColorPrimary"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp"/>
@@ -42,8 +42,7 @@
                 android:clickable="true"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1e1e1e"
-                >
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,7 +53,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="About App"
-                        android:textColor="@android:color/white"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -70,8 +69,7 @@
                 android:clickable="true"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1e1e1e"
-                >
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -82,7 +80,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="About Dev"
-                        android:textColor="@android:color/white"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -98,8 +96,7 @@
                 android:clickable="true"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1e1e1e"
-                >
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -110,7 +107,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="Theme Setting"
-                        android:textColor="@android:color/white"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -126,8 +123,7 @@
                 android:clickable="true"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1e1e1e"
-                >
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -138,7 +134,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="Send Feedback"
-                        android:textColor="@android:color/white"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -154,8 +150,7 @@
                 android:clickable="true"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1e1e1e"
-                >
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -166,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="Privacy and Policy"
-                        android:textColor="@android:color/white"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -182,8 +177,7 @@
                 android:clickable="true"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1e1e1e"
-                >
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -194,7 +188,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="Version Info"
-                        android:textColor="@android:color/white"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -204,7 +198,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="2025, RaamApp"
-            android:textColor="#6f6f6f"
+            android:textColor="?android:textColorSecondary"
             android:layout_marginTop="20dp"/>
     </LinearLayout>
 </ScrollView>
