@@ -6,15 +6,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center"
-    android:background="#000"
+    android:gravity="center_horizontal"
+    android:background="?attr/colorSurface"
     android:fitsSystemWindows="true">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Change Theme"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@android:color/white"/>
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Mode"
+        android:layout_marginTop="100dp"
+        android:textColor="?android:textColorSecondary"/>
+
+    <Switch
+        android:id="@+id/switchTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="2025, RaamApp"
+        android:textColor="?android:textColorSecondary"
+        android:layout_marginTop="300dp"/>
 </LinearLayout>

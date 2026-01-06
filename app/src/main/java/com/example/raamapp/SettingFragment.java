@@ -37,7 +37,10 @@ public class SettingFragment extends Fragment {
             startActivity(intent);
         });
 
-
+        menuTheme.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ThemeSetting.class);
+            startActivity(intent);
+        });
         return view;
     }
 }
