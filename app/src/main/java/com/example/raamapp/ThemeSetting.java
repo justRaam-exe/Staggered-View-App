@@ -21,7 +21,7 @@ public class ThemeSetting extends AppCompatActivity {
         setContentView(R.layout.about_theme_setting);
         Switch switchTheme = findViewById(R.id.switchTheme);
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean("dark_mode", true);
+        boolean isDarkMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES;
 
         switchTheme.setChecked(isDarkMode);
         switchTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
