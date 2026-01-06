@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#000"
+    android:background="?attr/colorSurface"
     android:padding="16dp"
     android:fitsSystemWindows="true"
     android:paddingTop="32dp"
@@ -26,7 +26,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="12dp"
-                android:background="@android:color/transparent"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 android:padding="8dp"
                 android:src="@drawable/ic_arrow_back" />
         </LinearLayout>
@@ -37,7 +37,8 @@
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
             app:cardUseCompatPadding="true"
-            app:cardElevation="6dp">
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="?attr/colorSurface">
 
             <ImageView
                 android:id="@+id/detailImage"
@@ -52,7 +53,7 @@
             android:id="@+id/detailTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="?android:textColorPrimary"
             android:textStyle="bold"
             android:textSize="22sp"
             android:layout_marginBottom="8dp"
@@ -62,7 +63,7 @@
             android:id="@+id/detailDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="?android:textColorSecondary"
             android:textSize="13sp"
             android:lineSpacingExtra="4dp"
             android:layout_marginLeft="50px"

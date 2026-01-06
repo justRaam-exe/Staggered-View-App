@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000"
+    android:background="?attr/colorSurface"
     tools:context=".MainActivity">
 
     <!--Daftar Gambar-->
@@ -34,7 +34,7 @@
         android:layout_height="65dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#1A1A1A"
+        android:background="?attr/colorSurface"
         android:elevation="8dp"
         android:padding="8dp">
 
@@ -43,9 +43,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_home"
-            android:tint="@color/white"
+            android:tint="?android:textColorPrimary"
             android:contentDescription="Home"/>
 
         <ImageButton
@@ -53,9 +53,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_search_real"
-            android:tint="@color/white"
+            android:tint="?android:textColorPrimary"
             android:contentDescription="Search"/>
         
         <ImageButton
@@ -63,9 +63,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_person"
-            android:tint="@color/white"
+            android:tint="?android:textColorPrimary"
             android:contentDescription="Profile"/>
     </LinearLayout>
 </LinearLayout>
