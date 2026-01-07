@@ -1,4 +1,4 @@
-package com.example.raamapp;
+package com.raam.weebapp;
 
 import android.content.Context;
 import android.content.Intent;

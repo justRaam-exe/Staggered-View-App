@@ -1,4 +1,4 @@
-package com.example.raamapp;
+package com.raam.weebapp;
 
 import org.junit.Test;
 

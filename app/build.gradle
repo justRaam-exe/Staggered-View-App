@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.raamapp'
+    namespace 'com.raam.weebapp'
     compileSdk 36
 
     defaultConfig {
