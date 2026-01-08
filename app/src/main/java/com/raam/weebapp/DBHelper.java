@@ -39,4 +39,38 @@ public class DBHelper extends SQLiteOpenHelper {
             db.insert("images", null, cv);
         }
     }
+
+    private void insertImage(SQLiteDatabase db, String imageName, String title, String desc) {
+        ContentValues cv = new ContentValues();
+        cv.put("image_name", imageName);
+        cv.put("title", title);
+        cv.put("description", desc);
+        db.insert("images", null, cv);
+    }
+
+    public List<ImageModel> getAllImages() {
+        List<ImageModel> list = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM images", null);
+
+        if (c.moveToFirst()) {
+            do {
+                list.add(new ImageModel(
+                   c.getInt(0),
+                   c.getString(1),
+                   c.getString(2),
+                   c.getString(3)
+                ));
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        return list;
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS images");
+        onCreate(db);
+    }
 }
