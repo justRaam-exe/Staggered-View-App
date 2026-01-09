@@ -68,6 +68,30 @@ public class DBHelper extends SQLiteOpenHelper {
         return list;
     }
 
+    public List<ImageModel> searchImages(String keyword) {
+        List<ImageModel> list = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor c = db.rawQuery(
+                "SELECT * FROM images WHERE title LIKE ?",
+                new String[]{"%" + keyword + "%"}
+        );
+
+        if (c.moveToFirst()) {
+            do {
+                list.add(new ImageModel(
+                        c.getInt(0),
+                        c.getString(1),
+                        c.getString(2),
+                        c.getString(3)
+                ));
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        return list;
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS images");

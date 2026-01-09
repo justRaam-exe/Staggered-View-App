@@ -10,35 +10,18 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
     private final Context context;
-    private JSONArray imageData;
+    private final List<ImageModel> data;
 
     public ImageAdapter(Context context) {
         this.context = context;
-        loadJsonData();
-    }
-
-    // Fungsi untuk memuat data JSON dari assets/image_data.json
-    private void loadJsonData() {
-        try {
-            InputStream is = context.getAssets().open("image_data.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String jsonString = new String(buffer, StandardCharsets.UTF_8);
-            imageData = new JSONArray(jsonString);
-        } catch (Exception e) {
-            e.printStackTrace();
-            imageData = new JSONArray();
-        }
+        DBHelper db = new DBHelper(context);
+        data = db.getAllImages();
     }
 
     @NonNull
@@ -50,45 +33,31 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        try {
-            JSONObject obj = imageData.getJSONObject(position);
+        ImageModel model = data.get(position);
 
-            String imageName = obj.getString("image");
-            int resId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
+        int resId = context.getResources().getIdentifier(model.imageName, "drawable", context.getPackageName());
 
-            holder.imageView.setImageResource(resId);
+        holder.imageView.setImageResource(resId);
 
-            holder.imageView.setOnClickListener(v -> {
-                try {
-                    String title = obj.getString("title");
-                    String desc = obj.getString("description");
-
-                    Intent intent = new Intent(context, ImageDetailActivity.class);
-                    intent.putExtra("imageRes", resId);
-                    intent.putExtra("imageTitle", title);
-                    intent.putExtra("imageDesc", desc);
-                    context.startActivity(intent);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        holder.imageView.setOnClickListener(v -> {
+           Intent intent = new Intent(context, ImageDetailActivity.class);
+           intent.putExtra("imageRes", resId);
+           intent.putExtra("imageTitle", model.title);
+           intent.putExtra("imageDesc", model.description);
+           context.startActivity(intent);
+        });
     }
 
     @Override
     public int getItemCount() {
-        return imageData.length();
+        return data.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imageView = itemView.findViewById(R.id.imageView);
+        ViewHolder(View view) {
+            super(view);
+            imageView = view.findViewById(R.id.imageView);
         }
     }
 }

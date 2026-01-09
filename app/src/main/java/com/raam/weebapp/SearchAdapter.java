@@ -10,21 +10,19 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONObject;
-
 import java.util.List;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
 
     private final Context context;
-    private List<JSONObject> dataList;
+    private List<ImageModel> dataList;
 
-    public SearchAdapter(Context context, List<JSONObject> dataList) {
+    public SearchAdapter(Context context, List<ImageModel> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
 
-    public void updateData(List<JSONObject> newList) {
+    public void updateData(List<ImageModel> newList) {
         this.dataList = newList;
         notifyDataSetChanged();
     }
@@ -38,25 +36,19 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull SearchAdapter.ViewHolder holder, int position) {
-        try {
-            JSONObject obj = dataList.get(position);
-            String imageName = obj.getString("image");
-            String title = obj.getString("title");
-            String desc = obj.getString("description");
+        ImageModel model = dataList.get(position);
 
-            int resId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
-            holder.imageView.setImageResource(resId);
+        int resId = context.getResources().getIdentifier(model.imageName, "drawable", context.getPackageName());
 
-            holder.imageView.setOnClickListener(v -> {
-                Intent intent = new Intent(context, ImageDetailActivity.class);
-                intent.putExtra("imageRes", resId);
-                intent.putExtra("imageTitle", title);
-                intent.putExtra("imageDesc", desc);
-                context.startActivity(intent);
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        holder.imageView.setImageResource(resId);
+
+        holder.imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, ImageDetailActivity.class);
+            intent.putExtra("imageRes", resId);
+            intent.putExtra("imageTitle", model.title);
+            intent.putExtra("imageDesc", model.description);
+            context.startActivity(intent);
+        });
     }
 
     @Override

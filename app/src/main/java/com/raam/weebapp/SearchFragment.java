@@ -14,11 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,15 +22,17 @@ public class SearchFragment extends Fragment {
     private RecyclerView recyclerSearch;
     private EditText searchInput;
     private SearchAdapter adapter;
-    private List<JSONObject> imageDataList = new ArrayList<>();
+    private DBHelper dbHelper;
 
     public SearchFragment() {}
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(
+            @NonNull LayoutInflater inflater,
+            @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState
+    ) {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         recyclerSearch = view.findViewById(R.id.recycleSearch);
         searchInput = view.findViewById(R.id.searchInput);
@@ -47,32 +44,14 @@ public class SearchFragment extends Fragment {
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.recycler_spacing);
         recyclerSearch.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true));
 
-        loadJsonData();
-        adapter = new SearchAdapter(requireContext(), imageDataList);
+        dbHelper = new DBHelper(requireContext());
+        List<ImageModel> imageList = dbHelper.getAllImages();
+
+        adapter = new SearchAdapter(requireContext(), imageList);
         recyclerSearch.setAdapter(adapter);
 
         setupSearchBar();
         return view;
-    }
-
-    private void loadJsonData() {
-        try {
-            InputStream is = requireContext().getAssets().open("image_data.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-
-            String jsonString = new String(buffer, StandardCharsets.UTF_8);
-            JSONArray jsonArray = new JSONArray(jsonString);
-
-            imageDataList.clear();
-            for (int i = 0; i < jsonArray.length(); i++) {
-                imageDataList.add(jsonArray.getJSONObject(i));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void setupSearchBar() {
@@ -89,16 +68,11 @@ public class SearchFragment extends Fragment {
     }
 
     private void filterImages(String query) {
-        List<JSONObject> filteredList = new ArrayList<>();
-        for (JSONObject obj : imageDataList) {
-            try {
-                String title = obj.getString("title");
-                if (title.toLowerCase().contains(query.toLowerCase())) {
-                    filteredList.add(obj);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        List<ImageModel> filteredList;
+        if(query.isEmpty()) {
+            filteredList = dbHelper.getAllImages();
+        } else {
+            filteredList = dbHelper.searchImages(query);
         }
 
         adapter.updateData(filteredList);
