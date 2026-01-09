@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.ImageButton;
 
 
 public class AboutAppActivity extends AppCompatActivity {
@@ -20,6 +21,11 @@ public class AboutAppActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        ImageButton btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> {
+            finish();
         });
     }
 }
