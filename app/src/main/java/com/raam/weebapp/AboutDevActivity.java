@@ -1,6 +1,7 @@
 package com.raam.weebapp;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,11 @@ public class AboutDevActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        ImageButton btnBackDev = findViewById(R.id.btnBackDev);
+        btnBackDev.setOnClickListener(v -> {
+            finish();
         });
     }
 }
