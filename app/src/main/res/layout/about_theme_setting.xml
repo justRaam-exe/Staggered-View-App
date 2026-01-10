@@ -7,36 +7,57 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center_horizontal"
     android:background="?attr/colorSurface"
     android:fitsSystemWindows="true">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Theme"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="?android:textColorPrimary"/>
+        android:orientation="horizontal"
+        android:gravity="start">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/btnBackDev"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?android:textColorPrimary"
+            android:src="@drawable/ic_arrow_back"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Mode"
-        android:layout_marginTop="100dp"
-        android:textColor="?android:textColorSecondary"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <Switch
-        android:id="@+id/switchTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Theme"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="?android:textColorPrimary"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="2025, RaamApp"
-        android:textColor="?android:textColorSecondary"
-        android:layout_marginTop="300dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Mode"
+            android:layout_marginTop="100dp"
+            android:textColor="?android:textColorSecondary"/>
+
+        <Switch
+            android:id="@+id/switchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2025, WeebsApp"
+            android:textColor="?android:textColorSecondary"
+            android:layout_marginTop="300dp"/>
+    </LinearLayout>
 </LinearLayout>
