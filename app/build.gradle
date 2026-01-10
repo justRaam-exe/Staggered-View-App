@@ -6,8 +6,12 @@ android {
     namespace 'com.raam.weebapp'
     compileSdk 36
 
+    buildFeatures {
+        buildConfig true
+    }
+
     defaultConfig {
-        applicationId "com.example.raamapp"
+        applicationId "com.raam.weebapp"
         minSdk 24
         targetSdk 36
         versionCode 1

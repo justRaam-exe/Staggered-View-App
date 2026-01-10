@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AlertDialog;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 
 public class SettingFragment extends Fragment {
 
@@ -54,6 +57,18 @@ public class SettingFragment extends Fragment {
             intent.putExtra(Intent.EXTRA_TEXT, "Hai Atmint, \nSaya ingin memberikan feedback:\n");
 
             startActivity(Intent.createChooser(intent, "Kirim feedback via"));
+        });
+
+        menuVersion.setOnClickListener(v -> {
+            new AlertDialog.Builder(requireContext())
+                    .setTitle("Version Info")
+                    .setMessage(
+                                    "App Name : WeebsApp\n" +
+                                    "Version  : 1.0\n" +
+                                    "Build    : 1"
+                    )
+                    .setPositiveButton("Ok", (dialog, which) -> dialog.dismiss())
+                    .show();
         });
         return view;
     }
