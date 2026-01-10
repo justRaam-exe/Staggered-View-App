@@ -51,7 +51,7 @@
 
     <string name="privacy_policy_text">
         WeebsApp respect your privacy. This application does not collect, store, or share any personal user data.
-        All wallpapers and application data are stored locally on the user's device. WeebsApp only request permissions that are necessary for its core functionality, such as setting wallpapers.
+        All wallpapers and application data are stored locally on the users device. WeebsApp only request permissions that are necessary for its core functionality, such as setting wallpapers.
         We do not use third-party analytics, tracking, or advertising services.
     </string>
 
