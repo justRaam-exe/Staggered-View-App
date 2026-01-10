@@ -29,14 +29,20 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     private void seedData(SQLiteDatabase db, Context context) {
-        for (int i = 1; i <= 26; i++) {
+        int i = 1;
+
+        while(true) {
             String name = "img_" + i;
+            int resId = context.getResources().getIdentifier(name, "drawable", context.getPackageName());
+            if (resId == 0) break;
+
             ContentValues cv = new ContentValues();
             cv.put("image_name", name);
             cv.put("title", "Wallpaper " + i);
             cv.put("description", "Auto seeded image");
 
             db.insert("images", null, cv);
+            i++;
         }
     }
 
