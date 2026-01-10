@@ -46,6 +46,15 @@ public class SettingFragment extends Fragment {
             Intent intent = new Intent(getActivity(), AboutPrivacyPolicy.class);
             startActivity(intent);
         });
+
+        menuFeedback.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(android.net.Uri.parse("mailto:sayapinterbuatakun@gmail.com"));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback WeebsApp");
+            intent.putExtra(Intent.EXTRA_TEXT, "Hai Atmint, \nSaya ingin memberikan feedback:\n");
+
+            startActivity(Intent.createChooser(intent, "Kirim feedback via"));
+        });
         return view;
     }
 }
