@@ -50,19 +50,43 @@
                 android:scaleType="fitCenter" />
         </androidx.cardview.widget.CardView>
 
-        <Button
+        <androidx.cardview.widget.CardView
             android:id="@+id/setWallpaperBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apply to Wallpaper"
-            android:textAllCaps="false"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="?attr/colorPrimary"
-            android:textColor="?android:textColorPrimary"/>
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="?attr/colorSurface">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="7dp"
+                android:layout_marginBottom="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_apply_wallpaper"
+                    app:tint="?android:textColorPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Apply to Wallpaper"
+                    android:textSize="14sp"
+                    android:textColor="?android:textColorPrimary"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/detailTitle"

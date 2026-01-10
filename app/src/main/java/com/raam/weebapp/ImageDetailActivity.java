@@ -7,8 +7,8 @@ import android.widget.TextView;
 import android.app.WallpaperManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.widget.Button;
 import android.widget.Toast;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,13 +21,14 @@ public class ImageDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_image_detail);
 
         ImageView imageView = findViewById(R.id.detailImage);
         TextView titleView = findViewById(R.id.detailTitle);
         TextView descView = findViewById(R.id.detailDesc);
         ImageButton btnBack = findViewById(R.id.btnBack);
-        Button btnSetWallpaper = findViewById(R.id.setWallpaperBtn);
+        View btnSetWallpaper = findViewById(R.id.setWallpaperBtn);
 
         btnBack.setOnClickListener(v -> onBackPressed());
 
