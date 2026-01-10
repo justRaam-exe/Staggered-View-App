@@ -17,7 +17,7 @@
         android:gravity="start">
 
         <ImageButton
-            android:id="@+id/btnBackDev"
+            android:id="@+id/btnBackTheme"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="?attr/selectableItemBackgroundBorderless"

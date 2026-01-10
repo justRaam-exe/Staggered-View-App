@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.Switch;
 import android.content.SharedPreferences;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -18,6 +19,7 @@ public class ThemeSetting extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.about_theme_setting);
         Switch switchTheme = findViewById(R.id.switchTheme);
+        ImageButton btnThemeBack = findViewById(R.id.btnBackTheme);
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
         boolean isDarkMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES;
 
@@ -27,6 +29,10 @@ public class ThemeSetting extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(
                     isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO
             );
+        });
+
+        btnThemeBack.setOnClickListener(v -> {
+            finish();
         });
     }
 }
