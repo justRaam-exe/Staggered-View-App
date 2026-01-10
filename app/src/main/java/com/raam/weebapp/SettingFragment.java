@@ -41,6 +41,11 @@ public class SettingFragment extends Fragment {
             Intent intent = new Intent(getActivity(), ThemeSetting.class);
             startActivity(intent);
         });
+
+        menuPrivacy.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), AboutPrivacyPolicy.class);
+            startActivity(intent);
+        });
         return view;
     }
 }

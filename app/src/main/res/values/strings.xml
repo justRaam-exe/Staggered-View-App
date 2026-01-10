@@ -48,4 +48,16 @@
         It is designed to be simple and visually aesthetic, allowing users to explore and
         experience the application in a clear, comfortable, and engaging way
     </string>
+
+    <string name="privacy_policy_text">
+        WeebsApp respect your privacy. This application does not collect, store, or share any personal user data.
+        All wallpapers and application data are stored locally on the user's device. WeebsApp only request permissions that are necessary for its core functionality, such as setting wallpapers.
+        We do not use third-party analytics, tracking, or advertising services.
+    </string>
+
+    <string name="terms_conditions_text">
+        By using WeebsApp, you agree that this application is provided for personal and non-commercial use only.
+        All content is intended for educational and demonstration purpose. The developer is not responsible for misuse of the application or its content.
+        The application is provided "as is" without any warranties, and features may change at any time.
+    </string>
 </resources>
