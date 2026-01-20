@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
@@ -22,10 +24,10 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         this.dataList = dataList;
     }
 
-    public void updateData(List<ImageModel> newList) {
-        this.dataList = newList;
-        notifyDataSetChanged();
-    }
+//    public void updateData(List<ImageModel> newList) {
+//        this.dataList = newList;
+//        notifyDataSetChanged();
+//    }
 
     @NonNull
     @Override
@@ -38,15 +40,19 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     public void onBindViewHolder(@NonNull SearchAdapter.ViewHolder holder, int position) {
         ImageModel model = dataList.get(position);
 
-        int resId = context.getResources().getIdentifier(model.imageName, "drawable", context.getPackageName());
+        Glide.with(context)
+                .load(model.image)
+                .into(holder.imageView);
 
-        holder.imageView.setImageResource(resId);
+//        int resId = context.getResources().getIdentifier(model.imageName, "drawable", context.getPackageName());
+//
+//        holder.imageView.setImageResource(resId);
 
         holder.imageView.setOnClickListener(v -> {
             Intent intent = new Intent(context, ImageDetailActivity.class);
-            intent.putExtra("imageRes", resId);
-            intent.putExtra("imageTitle", model.title);
-            intent.putExtra("imageDesc", model.description);
+            intent.putExtra("title", model.title);
+            intent.putExtra("desc", model.description);
+            intent.putExtra("image", model.image);
             context.startActivity(intent);
         });
     }
