@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1015574169306",
+    "firebase_url": "https://weebsapp-9deb1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "weebsapp-9deb1",
+    "storage_bucket": "weebsapp-9deb1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015574169306:android:5192cb3dafc237fa4447e3",
+        "android_client_info": {
+          "package_name": "com.raam.weebapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC70MhfaryhMyLl1EvykSUx8ykO4Cv5gc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
