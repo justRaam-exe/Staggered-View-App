@@ -9,19 +9,16 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
+import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
     private final Context context;
     private final List<ImageModel> data;
 
-    public ImageAdapter(Context context) {
+    public ImageAdapter(Context context, List<ImageModel> data) {
         this.context = context;
-        DBHelper db = new DBHelper(context);
-        data = db.getAllImages();
+        this.data = data;
     }
 
     @NonNull
@@ -35,15 +32,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ImageModel model = data.get(position);
 
-        int resId = context.getResources().getIdentifier(model.imageName, "drawable", context.getPackageName());
-
-        holder.imageView.setImageResource(resId);
+        Glide.with(context).load(model.image).centerCrop().into(holder.imageView);
 
         holder.imageView.setOnClickListener(v -> {
            Intent intent = new Intent(context, ImageDetailActivity.class);
-           intent.putExtra("imageRes", resId);
-           intent.putExtra("imageTitle", model.title);
-           intent.putExtra("imageDesc", model.description);
+           intent.putExtra("image", model.image);
+           intent.putExtra("title", model.title);
+           intent.putExtra("desc", model.description);
            context.startActivity(intent);
         });
     }
