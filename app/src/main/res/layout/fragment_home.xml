@@ -9,6 +9,45 @@
     android:paddingTop="32dp"
     tools:context=".HomeFragment">
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/filterContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAll"
+                android:text="All"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/btnNaruto"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="Naruto" />
+
+            <Button
+                android:id="@+id/btnSoloLeveling"
+                android:text="Solo Leveling"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/btnDemonSlayer"
+                android:text="Demon Slayer"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/btnHaikyuu"
+                android:text="Haikyuu"
+                style="?attr/materialButtonOutlinedStyle"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
