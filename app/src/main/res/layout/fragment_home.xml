@@ -22,26 +22,36 @@
             android:orientation="horizontal">
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/btnAll"
                 android:text="All"
                 style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/btnNaruto"
                 style="?attr/materialButtonOutlinedStyle"
                 android:text="Naruto" />
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/btnSoloLeveling"
                 android:text="Solo Leveling"
                 style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/btnDemonSlayer"
                 android:text="Demon Slayer"
                 style="?attr/materialButtonOutlinedStyle"/>
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/btnHaikyuu"
                 android:text="Haikyuu"
                 style="?attr/materialButtonOutlinedStyle"/>

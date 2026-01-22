@@ -50,11 +50,16 @@ public class HomeFragment extends Fragment {
         btnSolo = view.findViewById(R.id.btnSoloLeveling);
         btnDeSlay = view.findViewById(R.id.btnDemonSlayer);
 
+        btnAll.setOnClickListener(v -> loadData(null));
+        btnNaruto.setOnClickListener(v -> loadData("Naruto"));
+        btnSolo.setOnClickListener(v -> loadData("Solo Leveling"));
+        btnDeSlay.setOnClickListener(v -> loadData("Demon Slayer"));
+
         loadData(null);
         return view;
     }
 
-    private void loadData(String category) {
+    private void loadData(String catagory) {
         databaseReference.addListenerForSingleValueEvent(
                 new ValueEventListener() {
                     @Override
@@ -65,7 +70,7 @@ public class HomeFragment extends Fragment {
                             ImageModel model = data.getValue(ImageModel.class);
                             if (model == null) continue;
 
-                            if (category == null || model.category.equalsIgnoreCase(category)) {
+                            if (catagory == null || model.category.equalsIgnoreCase(catagory)) {
                                 imageList.add(model);
                             }
                         }
