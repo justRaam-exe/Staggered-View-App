@@ -18,10 +18,10 @@ public class HomeFragment extends Fragment {
 
     RecyclerView recyclerView;
     ImageAdapter adapter;
-    ArrayList<ImageModel> ImageList = new ArrayList<>();
+    ArrayList<ImageModel> imageList = new ArrayList<>();
 
     DatabaseReference databaseReference;
-    Button btnAll, btnNaruto, btnOnePiece;
+    Button btnAll, btnNaruto, btnSolo, btnDeSlay;
 
     @Nullable
     @Override
@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         );
 
-        // 🔹 Adapter langsung ambil data dari JSON
+        // 🔹 Adapter
         adapter = new ImageAdapter(requireContext(), imageList);
         recyclerView.setAdapter(adapter);
 
@@ -46,6 +46,9 @@ public class HomeFragment extends Fragment {
         databaseReference = FirebaseDatabase.getInstance().getReference("Wallpaper");
 
         btnAll = view.findViewById(R.id.btnAll);
+        btnNaruto = view.findViewById(R.id.btnNaruto);
+        btnSolo = view.findViewById(R.id.btnSoloLeveling);
+        btnDeSlay = view.findViewById(R.id.btnDemonSlayer);
 
         loadData(null);
         return view;
