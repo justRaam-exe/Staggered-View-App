@@ -8,7 +8,7 @@ public class ImageModel {
     public String title;
     public String description;
     public String image;
-    public String category;
+    public String catagory;
     public ImageModel () {
         // Empty function
     }

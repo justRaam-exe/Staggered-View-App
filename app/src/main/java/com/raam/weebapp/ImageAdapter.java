@@ -32,7 +32,11 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ImageModel model = data.get(position);
 
-        Glide.with(context).load(model.image).centerCrop().into(holder.imageView);
+        Glide.with(context)
+                .load(model.image)
+                .thumbnail(0.25f)
+                .centerCrop()
+                .into(holder.imageView);
 
         holder.imageView.setOnClickListener(v -> {
            Intent intent = new Intent(context, ImageDetailActivity.class);

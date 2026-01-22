@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment {
                             ImageModel model = data.getValue(ImageModel.class);
                             if (model == null) continue;
 
-                            if (catagory == null || model.category.equalsIgnoreCase(catagory)) {
+                            if (catagory == null || model.catagory.equalsIgnoreCase(catagory)) {
                                 imageList.add(model);
                             }
                         }

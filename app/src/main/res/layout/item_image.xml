@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_margin="4dp">-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:adjustViewBounds="true"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        android:background="#132440"-->
-<!--        android:contentDescription="@string/app_name"/>-->
-<!--</FrameLayout>-->
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp">
+    android:layout_margin="6dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -26,25 +12,27 @@
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
         app:cardUseCompatPadding="true">
-
-        <ImageView
-            android:id="@+id/imageView"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/app_name"/>
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"/>
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end|top"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_more_horiz"
+                app:tint="?android:textColorPrimary"
+                android:contentDescription="Menu"/>
+        </FrameLayout>
     </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/menuIcon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="-10dp"
-        android:src="@drawable/ic_more_horiz"
-        app:tint="?android:textColorPrimary"
-        android:contentDescription="Menu"/>
-
 </FrameLayout>

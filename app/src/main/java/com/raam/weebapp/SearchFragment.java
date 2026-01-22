@@ -106,7 +106,7 @@ public class SearchFragment extends Fragment {
                             ImageModel model = data.getValue(ImageModel.class);
                             if (model == null) continue;
                             if (model.title.toLowerCase().contains(keyword.toLowerCase()) ||
-                                model.category.toLowerCase().contains(keyword.toLowerCase())) {
+                                model.catagory.toLowerCase().contains(keyword.toLowerCase())) {
                                 imageList.add(model);
                             }
                         }
