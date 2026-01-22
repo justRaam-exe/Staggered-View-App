@@ -92,47 +92,52 @@ public class ImageDetailActivity extends AppCompatActivity {
     }
 
     private void applyWallpaper(int flag) {
-        // Beri tanda kalau proses dimulai
-        Toast.makeText(this, "Sedang mengunduh gambar...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Menyiapkan gambar...", Toast.LENGTH_SHORT).show();
 
-        Glide.with(getApplicationContext()) // Gunakan applicationContext agar lebih aman
+        Glide.with(this)
                 .asBitmap()
                 .load(imageUrl)
-                .override(1080, 1920)
                 .into(new CustomTarget<Bitmap>() {
                     @Override
                     public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                        // Bagian dalam onResourceReady
                         try {
-                            // Gunakan getApplicationContext() agar tidak memory leak
-                            WallpaperManager wm = WallpaperManager.getInstance(getApplicationContext());
+                            // Simpan di cache internal aplikasi (lebih aman)
+                            File cachePath = new File(getCacheDir(), "images");
+                            cachePath.mkdirs(); // buat folder jika belum ada
+                            File file = new File(cachePath, "temp_wallpaper.jpg");
 
-                            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                                // Gunakan bitmapp yang sudah di-resize (resource)
-                                wm.setBitmap(resource, null, true, flag);
-                            } else {
-                                wm.setBitmap(resource);
+                            FileOutputStream stream = new FileOutputStream(file);
+                            resource.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                            stream.close();
+
+                            // Ambil URI via FileProvider
+                            Uri contentUri = FileProvider.getUriForFile(ImageDetailActivity.this,
+                                    getPackageName() + ".provider", file);
+
+                            if (contentUri != null) {
+                                Intent intent = new Intent(WallpaperManager.ACTION_CROP_AND_SET_WALLPAPER);
+                                intent.setDataAndType(contentUri, "image/*");
+                                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+                                // Penting: tambahkan baris ini untuk beberapa HP tertentu
+                                intent.putExtra("mimeType", "image/*");
+
+                                startActivity(Intent.createChooser(intent, "Set Wallpaper:"));
                             }
 
-                            // Pakai runOnUiThread supaya Toast pasti muncul
-                            runOnUiThread(() -> Toast.makeText(ImageDetailActivity.this, "Berhasil Terpasang!", Toast.LENGTH_SHORT).show());
-
                         } catch (Exception e) {
-                            Log.e("WALLPAPER_ERROR", "Detail Error: ", e);
-                            runOnUiThread(() -> Toast.makeText(ImageDetailActivity.this, "Gagal: " + e.getMessage(), Toast.LENGTH_LONG).show());
+                            Log.e("WALLPAPER_ERROR", "Gagal: " + e.getMessage());
+                            Toast.makeText(ImageDetailActivity.this, "Gagal: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
-                    public void onLoadCleared(@Nullable Drawable placeholder) { }
+                    public void onLoadCleared(@Nullable Drawable placeholder) {}
 
                     @Override
                     public void onLoadFailed(@Nullable Drawable errorDrawable) {
-                        super.onLoadFailed(errorDrawable);
-                        Log.e("WALLPAPER_ERROR", "Glide gagal download dari: " + imageUrl);
-                        Toast.makeText(ImageDetailActivity.this, "Gagal mengunduh gambar, cek koneksi", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ImageDetailActivity.this, "Gagal download gambar", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
-
 }
