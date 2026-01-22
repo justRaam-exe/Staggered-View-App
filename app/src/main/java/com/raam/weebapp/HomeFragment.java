@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
     ArrayList<ImageModel> imageList = new ArrayList<>();
 
     DatabaseReference databaseReference;
-    Button btnAll, btnNaruto, btnSolo, btnDeSlay;
+    Button btnAll, btnNaruto, btnSolo, btnDeSlay, btnHaikyuu;
 
     @Nullable
     @Override
@@ -49,11 +49,13 @@ public class HomeFragment extends Fragment {
         btnNaruto = view.findViewById(R.id.btnNaruto);
         btnSolo = view.findViewById(R.id.btnSoloLeveling);
         btnDeSlay = view.findViewById(R.id.btnDemonSlayer);
+        btnHaikyuu = view.findViewById(R.id.btnHaikyuu);
 
         btnAll.setOnClickListener(v -> loadData(null));
         btnNaruto.setOnClickListener(v -> loadData("Naruto"));
         btnSolo.setOnClickListener(v -> loadData("Solo Leveling"));
         btnDeSlay.setOnClickListener(v -> loadData("Demon Slayer"));
+        btnHaikyuu.setOnClickListener(v -> loadData("Haikyuu"));
 
         loadData(null);
         return view;
